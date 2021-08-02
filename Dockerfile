@@ -24,7 +24,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python \
 # linking them together. Likewise, pip leaves the install caches populated which uses
 # a significant amount of space. These optimizations save a fair amount of space in the
 # image, which reduces start up time.
-RUN COPY requirements.txt /tmp/
+COPY requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt
 
 # cleanup step to make the image lighter
@@ -41,7 +41,7 @@ ENV PYTHONDONTWRITEBYTECODE=TRUE
 ENV PATH="/opt/program:${PATH}"
 
 # Set up the program in the image
-COPY budget_model/ /opt/program
+COPY model/ /opt/program
 WORKDIR /opt/program
 
 # TODO: make a safeuser and try to run this as them (including the pip installs and COPY)
