@@ -9,7 +9,9 @@ python flask backend for the cannalytics analytics
 
 # test
 Test payload:
+
 `make test`
 
-To test default values, empty payload, missing keys, etc, `blank.json` is included and can be evaluated with:  
+To test default values, empty payload, missing keys, etc, `blank.json` is included and can be evaluated with:
+
 `make blank`
