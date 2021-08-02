@@ -89,7 +89,7 @@ class Handler(object):
 
     @classmethod
     def parse_input(cls, data: Dict, num_samples: Optional[int] = None) -> pd.DataFrame:
-        """For the input, return set of budget options.
+        """For the input, return set of predictions.
 
         Args:
             data (Dict): The settings for the simulation
