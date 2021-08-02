@@ -6,9 +6,7 @@
         "$id": 1,
         "id": 1,
         "name": "mins_per_plant",
-        "description": null,
         "min": 2,
-        "max": 5,
-        "weight": 1
+        "max": 5
     }]
 }
