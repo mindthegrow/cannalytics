@@ -24,15 +24,8 @@ RUN ln -s /usr/bin/python3 /usr/bin/python \
 # linking them together. Likewise, pip leaves the install caches populated which uses
 # a significant amount of space. These optimizations save a fair amount of space in the
 # image, which reduces start up time.
-RUN pip3 install \
-        setuptools \
-        numpy==1.16.2 \
-        scipy==1.2.1 \
-        scikit-learn==0.20.2 \
-        pandas \
-        flask \
-        gevent \
-        gunicorn
+RUN COPY requirements.txt /tmp/
+RUN pip3 install -r /tmp/requirements.txt
 
 # cleanup step to make the image lighter
 RUN (cd /usr/local/lib/python3.6/dist-packages/scipy/.libs && rm * && ln ../../numpy/.libs/* .) && \
