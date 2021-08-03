@@ -15,3 +15,9 @@ Test payload:
 To test default values, empty payload, missing keys, etc, `blank.json` is included and can be evaluated with:
 
 `make blank`
+
+
+Test health:
+
+`make ping`
+
