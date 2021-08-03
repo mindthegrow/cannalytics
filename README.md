@@ -21,3 +21,7 @@ Test health:
 
 `make ping`
 
+# clean
+Remove temporary / test files:
+
+`make clean`
